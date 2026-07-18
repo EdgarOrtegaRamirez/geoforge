@@ -49,11 +49,11 @@ func TestFilterFeatures(t *testing.T) {
 
 func TestParseFilter(t *testing.T) {
 	tests := []struct {
-		input    string
-		wantErr  bool
-		wantKey  string
-		wantOp   string
-		wantVal  string
+		input   string
+		wantErr bool
+		wantKey string
+		wantOp  string
+		wantVal string
 	}{
 		{"name=New York", false, "name", "=", "New York"},
 		{"population!=0", false, "population", "!=", "0"},

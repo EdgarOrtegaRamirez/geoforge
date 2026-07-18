@@ -220,7 +220,7 @@ func ApproximateArea(coords []geojson.Position) float64 {
 		lon2 := coords[j][0] * math.Pi / 180
 		area += (lon2 - lon1) * (2 + math.Sin(lat1) + math.Sin(lat2))
 	}
-	area = math.Abs(area*6378137*6378137/2) // Earth radius squared
+	area = math.Abs(area * 6378137 * 6378137 / 2) // Earth radius squared
 	return area
 }
 

@@ -12,13 +12,13 @@ import (
 
 // Stats represents statistical information about a GeoJSON dataset.
 type Stats struct {
-	FeatureCount   int                        `json:"feature_count"`
-	GeometryTypes  map[string]int             `json:"geometry_types"`
-	PropertyKeys   []string                   `json:"property_keys"`
-	PropertyTypes  map[string]map[string]int  `json:"property_types"`
-	BBox           *geometry.BBox             `json:"bbox,omitempty"`
-	Centroid       *geometry.Centroid         `json:"centroid,omitempty"`
-	SampleFeatures map[string]interface{}     `json:"sample_features,omitempty"`
+	FeatureCount   int                       `json:"feature_count"`
+	GeometryTypes  map[string]int            `json:"geometry_types"`
+	PropertyKeys   []string                  `json:"property_keys"`
+	PropertyTypes  map[string]map[string]int `json:"property_types"`
+	BBox           *geometry.BBox            `json:"bbox,omitempty"`
+	Centroid       *geometry.Centroid        `json:"centroid,omitempty"`
+	SampleFeatures map[string]interface{}    `json:"sample_features,omitempty"`
 }
 
 // Analyze computes statistics for a GeoJSON object.

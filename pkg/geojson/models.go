@@ -12,12 +12,12 @@ import (
 type GeometryType string
 
 const (
-	PointType            GeometryType = "Point"
-	MultiPointType       GeometryType = "MultiPoint"
-	LineStringType       GeometryType = "LineString"
-	MultiLineStringType  GeometryType = "MultiLineString"
-	PolygonType          GeometryType = "Polygon"
-	MultiPolygonType     GeometryType = "MultiPolygon"
+	PointType              GeometryType = "Point"
+	MultiPointType         GeometryType = "MultiPoint"
+	LineStringType         GeometryType = "LineString"
+	MultiLineStringType    GeometryType = "MultiLineString"
+	PolygonType            GeometryType = "Polygon"
+	MultiPolygonType       GeometryType = "MultiPolygon"
 	GeometryCollectionType GeometryType = "GeometryCollection"
 )
 
@@ -26,9 +26,9 @@ type Position = []float64
 
 // Geometry represents a GeoJSON geometry object.
 type Geometry struct {
-	Type        GeometryType   `json:"type"`
+	Type        GeometryType  `json:"type"`
 	Coordinates interface{}   `json:"coordinates"`
-	Geometries  []interface{}  `json:"geometries,omitempty"` // For GeometryCollection
+	Geometries  []interface{} `json:"geometries,omitempty"` // For GeometryCollection
 }
 
 // Feature represents a GeoJSON feature.
